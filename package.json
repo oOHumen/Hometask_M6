@@ -1,0 +1,28 @@
+{
+  "name": "Hometask_M6",
+  "version": "1.0.0",
+  "description": "M 6: Webdriver JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oOHumen/Hometask_M6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oOHumen/Hometask_M6/issues"
+  },
+  "homepage": "https://github.com/oOHumen/Hometask_M6#readme",
+  "devDependencies": {
+    "@wdio/cli": "^7.25.4",
+    "@wdio/local-runner": "^7.25.4",
+    "@wdio/mocha-framework": "^7.25.4",
+    "@wdio/spec-reporter": "^7.25.4",
+    "chromedriver": "^107.0.3",
+    "wdio-chromedriver-service": "^8.0.0"
+  }
+}
