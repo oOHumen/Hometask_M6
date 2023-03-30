@@ -33,10 +33,15 @@ describe('Open page and check', () => {
         await messageSimulator.click();
         await expect(browser).toHaveUrl('https://eviltester.github.io/synchole/messages.html')
         // find "hello there" by xPath implicitly, and check it is displayed 
-        const hello = await browser.waitUntil(async () => {
-            return await $('/html[1]/body[1]/div[2]/ul[1]/li[16]');
+        const helloText = await browser.waitUntil(async () => {
+            return await $("//li[text()='hello there']")
+        }, {
+            timeout: 8000,
+            interval: 500,
+            timeoutMsg: 'expected text "hello there" is not appear after 8s'
         });
-        await expect(hello).toBeDisplayed();
+
+        await expect(helloText).toBeDisplayed();
     });
 
     it('the Simple Form', async () => {
